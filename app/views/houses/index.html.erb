@@ -1,0 +1,44 @@
+<h1>Houses#index</h1>
+<h2> JUST MESSSINNNNNNNNNN</H2>
+
+<table>
+  <Header> Table Header   </Header>
+  <tr>
+    <td>1 </td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>11 </td>
+    <td>22</td>
+    <td>33</td>
+  </tr>
+  <tr>
+    <td>111 </td>
+    <td>222</td>
+    <td>333</td>
+  </tr>
+</table>
+<p>Find me in app/views/houses/index.html.erb</p>
+
+
+
+<h3> HERE IS A LIST OF ALL THE HOUSES </h3>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li> <%= house.name  %>  Thier total House Points <%= pluralize(house.points, 'point') %>.  </li>
+  <% end  %>
+</ul>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li> <%= link_to house.name, 'http://www.google.com'  %>  Thier total House Points <%= pluralize(house.points, 'point') %>.  </li>
+  <% end  %>
+</ul>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li> <%= link_to house.name, house  %>  Thier total House Points <%= pluralize(house.points, 'point') %>.  </li>
+  <% end  %>
+</ul>

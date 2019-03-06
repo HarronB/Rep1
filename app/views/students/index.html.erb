@@ -1,0 +1,17 @@
+<h1>Students#index</h1>
+<p>Find me in app/views/students/index.html.erb</p>
+
+
+
+
+
+<h3> List of all Students </h3>
+
+<ul>
+  <% @student.each do |student|%>
+    <li> <%= link_to student.name, student %>    <br>     HOUSE: <%= student.house.name%>  </li>
+  <%end%>
+</ul>
+
+
+
