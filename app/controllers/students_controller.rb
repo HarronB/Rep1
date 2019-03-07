@@ -2,10 +2,11 @@
 
 class StudentsController < ApplicationController
   def index
-    @student = Student.order(:name)
+    # @student = Student.order(:name)
+    @students = Student.includes(:house).order(:name)
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.includes(:house).find(params[:id])
   end
 end

@@ -1,12 +1,13 @@
-class TeachersController < ApplicationController
+# frozen_string_literal: true
 
+class TeachersController < ApplicationController
   # GET /teachers
   def index
-    @teachers = Teacher.order(:name)
+    @teachers = Teacher.includes(:house).order(:name)
   end
 
   # GET /teachers/:id
   def show
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.includes(:house).find(params[:id])
   end
 end

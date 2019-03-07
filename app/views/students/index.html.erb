@@ -8,8 +8,8 @@
 <h3> List of all Students </h3>
 
 <ul>
-  <% @student.each do |student|%>
-    <li> <%= link_to student.name, student %>    <br>     HOUSE: <%= student.house.name%>  </li>
+  <% @students.each do |student|%>
+    <li> <%= link_to student.name, student %>    <br>     HOUSE: <%= link_to student.house.name, student.house%>  </li>
   <%end%>
 </ul>
 

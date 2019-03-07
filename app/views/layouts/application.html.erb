@@ -11,14 +11,28 @@
   </head>
 
   <body>
-    <h1> THIS IS IN application.html.erb page. It displays on all Pages </h1>
+
+
+
+    <header>
+       <h1> THIS IS IN application.html.erb page. It displays on all Pages </h1>
+          <nav>
+            <ul>
+                <li> <%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'teachers', teachers_path %> </li>
+                <li><%= link_to 'students', students_path %> </li>
+                <li><%= link_to 'About Us', static_path(permalink: 'about-us') %> </li>
+                <li><%= link_to 'Contact', static_path(permalink: 'contact') %> </li>
+            </ul>
+          </nav>
+    </header>
     <%= yield %>
   </body>
 
 
 
-dfgdg
 
+  <p> ------------------------------------------------------ </p>
   <h4> shitty nav </h4>
   <P> <%= link_to 'houses', houses_path %> </p>
 <P> <%= link_to 'teachers', teachers_path %> </p>

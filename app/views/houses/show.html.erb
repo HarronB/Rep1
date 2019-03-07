@@ -10,22 +10,20 @@
 
 
 <h3> <%= @house.name %>'s Teachers   COUNT: <%= @house.teachers.count%> </h3>
-
 <ul>
 <%  @house.teachers.each do |teacher|      %>
   <li>
-    <%= teacher.name %>
+    <%= link_to teacher.name, teacher %>
   </li>
 <% end %>
 </ul>
 
 
 <h3> <%=@house.name%>'s Students     COUNT: <%=@house.students.count%>   </h3>
-
 <ul>
   <% @house.students.each do |student| %>
     <li>
-      <%=student.name%>
+      <%= link_to student.name, student%>
     </li>
   <%end%>
 </ul>

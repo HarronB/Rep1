@@ -7,7 +7,7 @@
 <ul>
   <% @teachers.each do |teacher|%>
   <li>
-      <%= link_to teacher.name, teacher %> bel to house <%= teacher.house.name %> .
+      <%= link_to teacher.name, teacher %> belong to house <%= link_to teacher.house.name, teacher.house%> .
   </li>
   <%end%>
 </ul>
